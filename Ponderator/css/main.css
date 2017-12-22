@@ -1,0 +1,485 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.b {
+    border:solid thin gray;
+}
+body{
+    background-color:  #ececec;
+    margin-top: 20px;
+}
+a,a:visited,a:link{
+    color:#5c57f7;
+}
+body > header{
+    padding: 15px 0;
+    padding-top: 25px;
+    text-align: center;
+}
+body > footer{
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    clear: both;
+    padding: 20px 0;
+}
+body > #container{
+/*    border:solid thin gray;*/
+    margin:0 auto;
+    width: 80%;
+}
+
+body > #container p{
+    text-align: center;
+}
+#tablaUsuarios{
+    margin: 10px auto;
+    width:90%;
+}
+#tablaUsuarios th{
+    width: 20%;
+}
+#tablaUsuarios td > input{
+    margin: 4px 5px;
+    width: 90%;
+}
+#tablaUsuarios th.w20{
+    width: 10%;
+}
+.centrar{
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+#botones *{
+    margin: 10px;
+}
+#result{
+    clear: both;
+    font-size: 60px;
+    margin: 30px auto;
+    margin-bottom: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+}
+#message{
+    color: #11B0AB;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.social{
+    color: #bbb;
+}
+.eliminar{
+    margin: 0 auto;
+    /*width: 30px;*/
+}
+/*==================================================*/
+/*                  Inicia Responsive               */                    
+/*==================================================*/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 980px) and (max-width: 1280px) {
+    #tablaUsuarios{
+        width: 70%;
+    }
+    #tablaUsuarios td > input{
+        width: 85%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #tablaUsuarios * td{
+        margin: 0;
+        padding: 0;
+    }
+    #tablaUsuarios td > input{
+        width: 85%;
+    }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    body > #container{
+        width: 95%;
+    }
+    header > h1{
+        font-size: 30px;
+    }
+    #tablaUsuarios * td{
+        margin: 0;
+        padding: 0;
+    }
+    #tablaUsuarios td > input{
+        width: 80%;
+    }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    body > #container{
+        width: 90%;
+    }
+    header > h1{
+        font-size: 26px;
+    }
+    #tablaUsuarios{
+        width: 100%;
+    }
+    #tablaUsuarios td > input{
+        width: 70%;
+    }
+    #tablaUsuarios td > input.btn{
+        width: auto;
+    }
+}
+
+.github-ribbon img {
+position: fixed;
+top: 0;
+right: 0;
+z-index: 2;
+border: 0;
+}
+.ads-1{margin:0 auto;width:65%;}
+.ads-2{margin:0 auto;width:100%;height: 85px;}
+#ads-iframe{height: 100px;}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media (min-width: 1280px) {
+    /*#ads-daiech{height: 133px;}*/
+    
+}
+@media (min-width: 980px) and (max-width: 1280px) {
+    /*#ads-daiech{height: 133px;}*/
+    .ads-1{
+        /*height: 133px;*/
+        width: 80%}
+}
+@media (max-width: 840px) {
+    .github-ribbon img {display: none;}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    /*.ads-1{width: 80%}
+    #ads-daiech{height: 200px;}*/
+}
+@media (max-width: 767px) {
+    .ads-1{margin:0 auto;width:100%;
+        /*height: 200px;*/
+    }/*
+    #ads-daiech{height: 200px;}*/
+}
+@media (max-width: 480px) {
+   /* .ads-1{margin:0 auto;width:98%;
+        height: 200px;
+    }
+    #ads-daiech{height: 200px;}*/
+}
+@media (max-width: 380px) {
+    /*.ads-1{margin:0 auto;width:98%;
+        height: 256px;
+    }
+    #ads-daiech{height: 256px;}*/
+}
+@media (max-width: 320px) {
+    /*.ads-1{margin:0 auto;width:98%;
+        height: 265px;
+    }
+    #ads-daiech{height: 265px;}*/
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

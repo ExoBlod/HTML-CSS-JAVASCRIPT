@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="fb:admins" content="613801383" />
+    <meta property="fb:app_id" content="138582546256590" />
+    <meta property="og:site_name" content="MauricioAizaga.com" />
+    <meta property="og:title" content="Calcula tu Promedio de semestre" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Aplicación para calcular el promedio de notas de semestre de un estudiante universitario" />
+    <meta name="description" content="Aplicación para calcular el promedio de notas de semestre de un estudiante universitario" />
+    <meta name="author" content="Luis Torres @ExoBlod">
+    <meta name="keywords" content="Promedio,PromedioUTP,Promedio UTP, Universidad, UTP, Universidad Tecnologica del Peru, Peru,notas,@ExoBlod,Calcula tu Promedio de semestre, promedio de notas, promedio universidad, notas de semestre, notas finales de semestre, como calcular tu promedio de notas">
+    <link rel="shortcut icon" href="http://31.media.tumblr.com/avatar_890618551ead_128.png">
+    <title>Ponderator</title>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=138582546256590";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- <div class="ads-2">
+    <iframe id="ads-iframe" frameborder="0" height="auto" src="http://daiech.com/ads/1" width="100%"></iframe>
+</div> -->
+<div class="container">
+    <div id="header-banner" class="row page-header">
+        <div class="col-md-8">
+            <h1>Promedio ponderado de Notas</h1>
+            <p class="lead lead-18">Calcula tu Promedio de semestre.</p>
+        </div>
+        <div class="col-md-4">
+            <div class="social">
+                <!-- Inserta esta etiqueta después de la última etiqueta de Botón +1. -->
+                <script type="text/javascript">
+                    window.___gcfg = {lang: 'es'};
+                    (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/platform.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- ads -->
+    <div class="ads-1">
+        <style>
+            .promedio2014 { width: 320px; height: 50px; }
+            @media(min-width: 500px) { .promedio2014 { width: 468px; height: 60px; } }
+            @media(min-width: 800px) { .promedio2014 { width: 728px; height: 90px; } }
+            body{
+                background: #C8D5B9 no-repeat fixed center center;
+                background-size: cover;
+            }
+
+        </style>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Promedio2014 -->
+        <ins class="adsbygoogle promedio2014"
+             style="display:inline-block"
+             data-ad-client="ca-pub-4855505975383310"
+             data-ad-slot="7898466177"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <!-- /ads -->
+    <div class="row line-separator"></div>
+    <div id="form-container">
+        <form id="f">
+            <table id="tablaUsuarios" class="table table-bordered" >
+                <tbody>
+                <tr>
+                    <th class="w20">Materia</th>
+                    <th>Nota <sup>*</sup></th>
+                    <th>Num. Creditos <sup>*</sup></th>
+                    <th class="w20">Eliminar</th>
+                </tr>
+                </tbody>
+            </table>
+            <div id="" class="text-right">
+                <button type="button" id="guardar" class="btn btn-success btn-lg" ><span class="glyphicon glyphicon-hand-right"></span> Calcular Promedio</button>
+            </div>
+            <div id="result" class="center80">
+                0.0
+            </div>
+            <div id="messageGif" class="center80"></div>
+            <div id="message" class="center80"></div>
+            <div id="showCalc" class="center80">
+                <a href="#">ver c&aacute;lculo</a>
+                <div>.....</div>
+            </div>
+        </form>
+    </div>
+    <div class="center80">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Promedio 2 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:100px"
+             data-ad-client="ca-pub-4855505975383310"
+             data-ad-slot="2955061375"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</div> <!-- /container -->
+<script type="text/template" id="materiaTpl">
+    {% for m in materias %}
+    <tr>
+        <td><input name='materia[]' type='text' size='15' placeholder='Materia' value="{{ m.nombre }}" /></td>
+        <td><input name='nota[]' type='text' min='0' max='5' size='10' placeholder='Nota' value="{{ m.nota }}" required {{ m.autofocus }}  class='grade input-number' /></td>
+        <td><input name='creditos[]' type='text' size='10' placeholder='Num. creditos' value="{{ m.creditos }}" required class="input-number" /></td>
+        <td><a href='#' class='btn btn-primary btn-small new-subject' title='Agregar otra materia'>
+            <span class='glyphicon glyphicon-plus'></span></a>
+            <button type='button' class='btn btn-danger btn-small remove-subject' title='Borrar esta materia'><span class='glyphicon glyphicon-remove'></span></button></td>
+    </tr>
+    {% endfor %}
+</script>
+<footer>
+    Desarrollado por <a href="https://www.facebook.com/T0nal" target="_blank">Luis Torres</a> en <a href="https://github.com/ExoBlod" target="_blank">@ExoBlod</a><br />
+    <div class="fb-like" data-href="http://facebook.com/daiech" data-send="false" data-width="400" data-show-faces="true"></div>
+</footer>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+<script src="js/vendor/jquery-1.8.3.min.js"></script>
+<script src="js/vendor/swig.min.js"></script>
+<script src="js/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>
+    var _gaq=[['_setAccount','UA-25028369-2'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
